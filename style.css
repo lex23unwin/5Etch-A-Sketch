@@ -35,8 +35,11 @@ header p {
     gap: 2em;
 }
 
-.button {
+button {
     font-size: 1.5rem;
+    border: 5px solid pink;
+    background-color: pink;
+    border-radius: 15px;
 }
 
 main {
@@ -47,15 +50,16 @@ main {
 }
 
 .container {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     margin: 0 2em;
     padding: 2em 0;
-    border: 3px solid red;
+    border: 3px solid pink;
+    background-color: #ddd;
 }
 
 .containerSquare {
-
+    border: 1px solid black;
 }
 
 footer {
@@ -64,3 +68,4 @@ footer {
     text-align: center;
     font-size: 1.2rem;
 }
+
