@@ -1,10 +1,13 @@
 let container = document.querySelector(".container");
 let slider = document.querySelector("#size-slider");
+let resetButton = document.querySelector(".reset")
+let blackButton = document.querySelector(".black")
+let rgbButton = document.querySelector(".rgb")
+let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 
 slider.addEventListener("input", () => {
-    let sliderValue = slider.value;
     clearGrid();
-    createGrid(sliderValue);
+    createGrid(slider.value);
 })
 
 function createGrid(sliderValue)
@@ -13,13 +16,13 @@ function createGrid(sliderValue)
     {
         let containerSquare = document.createElement("div")
         containerSquare.classList.add("containerSquare")
-        container.setAttribute("style", `grid-template-columns: repeat(${sliderValue}, 2fr);
-        grid-template-rows: repeat(${sliderValue}, 2fr);`)
         containerSquare.addEventListener("mouseover", () => {
             containerSquare.style.backgroundColor = "black"
         })
         container.appendChild(containerSquare)
     }
+    container.setAttribute("style", `grid-template-columns: repeat(${sliderValue}, 2fr);
+        grid-template-rows: repeat(${sliderValue}, 2fr);`)
 
 }
 
@@ -30,15 +33,7 @@ function clearGrid()
         container.removeChild(container.firstChild);
     }
 }
-
-
-
-
-
-
-
-createGrid();
-
+createGrid(slider.value);
 
 
 
