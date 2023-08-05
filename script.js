@@ -65,7 +65,6 @@ rgbButton.addEventListener("click", () => {
 })
 
 
-
 createGrid(slider.value);
 
 
