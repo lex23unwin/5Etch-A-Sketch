@@ -52,6 +52,18 @@ blackButton.addEventListener("click", () => {
     })
 })
 
+rgbButton.addEventListener("click", () => {
+    clearGrid();
+    createGrid(slider.value)
+    let allSquares = Array.from(container.children)
+    allSquares.forEach( (eachSquare) => {
+        eachSquare.addEventListener("mouseover", () => {
+            eachSquare.style.backgroundColor = 
+                colors[Math.floor(Math.random() * colors.length)]
+        })
+    })
+})
+
 
 
 createGrid(slider.value);
