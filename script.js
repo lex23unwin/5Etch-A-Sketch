@@ -33,6 +33,15 @@ function clearGrid()
         container.removeChild(container.firstChild);
     }
 }
+
+resetButton.addEventListener("click", () => {
+    let allSquares = Array.from(container.children)
+    allSquares.forEach( (eachSquare) => {
+        eachSquare.style.backgroundColor = "#ddd";
+    })
+})
+
+
 createGrid(slider.value);
 
 
